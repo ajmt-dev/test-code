@@ -1,0 +1,15 @@
+---
+- name: Hello World!
+  hosts: all
+ 
+  tasks:
+ 
+    - name: Hello World!
+      shell: echo "Hi! Tower is working."
+
+    - name: credential retrieval basic
+      cyberark.pas.cyberark_credential:
+        api_base_url: "http://10.10.0.1"
+        app_id: "TestID"
+        query: "Safe=test;UserName=admin"
+        register: result
