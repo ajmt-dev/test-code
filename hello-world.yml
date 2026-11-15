@@ -13,3 +13,7 @@
         app_id: "TestID"
         query: "Safe=test;UserName=admin"
         register: result
+
+    - name: Hello World!
+      debug:
+        msg: "Hi! Tower is still working."
